@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('TTLakes-Regular.eot');
+    src: url('TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('TTLakes-Regular.woff') format('woff'),
+    url('TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('TTLakes-Medium.eot');
+    src: url('TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('TTLakes-Medium.woff') format('woff'),
+    url('TTLakes-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('TTLakes-Bold.eot');
+    src: url('TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('TTLakes-Bold.woff') format('woff'),
+    url('TTLakes-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+.body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background: #F8F8F8;
+}
+
+.hat {
+    display: flex;
+    background: #FFFFFF;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.hat__list {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 16px;
+    padding-left: 0;
+    margin: 24px 16px 24px 16px;
+}
+
+li a {
+    height: 40px;
+    align-self: center;
+}
+
+.hat__item {
+    align-self: bottom;/* надо как-то выровнять этот элемент*/
+}
+
+.hat__divider {
+    width: 2px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 1px;
+    background: #EAEAEA;
+}
+/*
+.hat__list--first:last-child {
+    display: none;
+    align-self: center;
+}*/
+
+.title {
+    display: flex;
+    width: 288px;
+    height: 40px;
+    margin-right: 16px;
+    font-family: TT Lakes Bold;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+}
+
+.highlight {
+    width: 4px;
+    height: 40px;
+    background: #41F6D7;
+}
+
+.main {
+    background: #F8F8F8;
+    overflow-y: scroll;
+}
+
+.menu {
+    display: flex;
+    overflow: scroll;
+    padding: 0;
+    margin: 24px 16px 24px 16px;
+    height: 40px;
+}
+
+.menu__item {
+    font-family: "TT Lakes Regular";
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    padding: 0 15px 0 15px;
+}
+
+.menu__item:first-child {
+    border-radius: 6px;
+    border: 2px solid #B8FFEC;
+    background: #FFF;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main {
+    padding: 0;
+    margin: 0;
+}
+
+.main__text {
+    font-family: "TT Lakes Regular";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    margin: 0 16px 16px 16px;
+}
+
+.main__text p {
+    padding: 0;
+    margin: 0 0 0 0;
+}
+
+.main__link a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.main__link__text {
+    width: 100px;
+    color: #1B1C21;
+    font-family: "TT Lakes Medium";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 0;
+    margin: 0;
+}
+
+/*.main__link svg {
+    width: 24px;
+    height: 24px;
+    top: 346px;
+    left: 16px;
+}*/
+
+.main__link {
+    margin-bottom: 16px;
+}
+
+.main__img {
+    padding: 0;
+    margin: 0;
+    width: 320px;
+    height: 176px;
+}
+
+.hat__call, .hat__chat, .hat__profile, .hat__divider--first, .hat__divider--second {
+    display: none;
+}
+
+.main__text--second {
+    display: none;
+}
+
+.title {
+    gap: 12px;
+}
+
+@media screen and (min-width: 768px) {
+    /*.body {
+        width: auto;
+        height: auto;
+    }*/
+
+    .hat__call, .hat__chat, .hat__profile, .hat__divider--first, .hat__divider--second {
+        display: block;
+    }
+    .main__text--second {
+        display: block;
+    }
+
+    .hat__divider--between {
+        display: none;
+    }
+
+    .title {
+        gap: 20px;
+    }
+
+    .main {
+        display: flex;
+        justify-content: start;
+        gap: 48px;
+        height: 208px;
+        margin-left: 24px;
+        margin-right: 25px;
+    }
+
+    .main__section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main__text {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        /*line-height: 20px;*/
+        /*height: 160px;*/
+        /*две строчки НИЖЕ ЧТОБЫ ОБРЕЗАТЬ FLEX-ЭЛЕМЕНТ
+        flex-wrap: wrap; 
+        overflow: hidden;*/
+        width: 312px;
+        color: #1B1C21;
+        /*font-family: "TT Lakes";*/
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main__text--second {
+        display: none;/*flex;
+        flex-wrap: wrap; 
+        overflow: hidden;*/
+    }
+
+    .main__img {
+        width: 360px;
+        height: 208px;
+    }
+
+    .main__link {
+        margin-left: 1px;
+        margin-bottom: 14px;
+    }
+
+}
+
+@media screen and (min-width: 1120px) {
+    .body {
+        display: grid;
+        grid-template-areas: "title hat"
+                            "nav nav"
+                            "main main";
+        width: auto;
+        margin: 42px 25px 0 1px;
+    }
+
+    .title {
+        grid-area: title;
+        margin: 0;
+    }
+
+    .hat {
+        grid-area: hat;
+        background: #F8F8F8;
+        justify-content: flex-end;
+    }
+
+    .hat__list--first, .hat__divider, .hat__call, .hat__chat, .hat__profile {
+        display: none;
+    }
+
+    .hat__list {
+        margin: 0;
+    }
+
+    .hat__repair::before {
+        content: "Оставить заявку";
+        margin-right: 8px;
+    }
+
+    .hat__checkstatus::before {
+        content: "Статус ремонта";
+        margin-right: 9px;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        height: 40px;
+    }    
+
+    .nav {
+        grid-area: nav;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .main {
+        grid-area: main;
+        height: auto;
+    }
+
+    .main__text {
+        width: 490px;
+    }
+
+    .main__text--second {
+        display: flex;
+    }
+
+    .main__text--shot {
+        display: none;
+    }
+
+    .main__img {
+        width: auto;
+        height: 307px;
+    }
+
+    .main__link {
+        margin-left: 2px;
+        margin-bottom: 14px;
+    }
+
+}
