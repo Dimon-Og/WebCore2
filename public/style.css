@@ -18,10 +18,10 @@
     }
 @font-face {
     font-family: 'TT Lakes Bold';
-    src: url('TTLakes-Bold.eot');
-    src: url('TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
-    url('TTLakes-Bold.woff') format('woff'),
-    url('TTLakes-Bold.ttf') format('truetype');
+    src: url('https://dimon-og.github.io/WebCore2/public/assets/TTLakes-Bold.eot');
+    src: url('https://dimon-og.github.io/WebCore2/public/assets/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('https://dimon-og.github.io/WebCore2/public/assets/TTLakes-Bold.woff') format('woff'),
+    url('https://dimon-og.github.io/WebCore2/public/assets/TTLakes-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     }
