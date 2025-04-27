@@ -27,8 +27,9 @@
     }
 
 .body {
-    overflow-y: scroll;/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-    text-overflow: ellipsis;
+    /*overflow-y: scroll;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    text-overflow: ellipsis;*/
+
     margin: 0;
     padding: 0;
     width: 100%;
@@ -36,10 +37,10 @@
     background: #F8F8F8;
 }
 
-::-webkit-scrollbar {
-    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*::-webkit-scrollbar {
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     width: 0;
-    }
+    }*/
 
 .hat {
     display: flex;
@@ -219,6 +220,12 @@ a {
     gap: 12px;
 }
 
+@media screen and (max-width: 1119px) {
+    .hat__text {
+        display: none;
+    }
+} 
+
 @media screen and (min-width: 768px) {
     /*.body {
         width: auto;
@@ -310,6 +317,13 @@ a {
     }
 
     .hat {
+        font-family: "TT Lakes Regular";
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: right;
+
         grid-area: hat;
         background: #F8F8F8;
         justify-content: flex-end;
@@ -323,7 +337,7 @@ a {
         margin: 0;
     }
 
-    .hat__repair::before {
+    /*.hat__repair::before {
         content: "Оставить заявку";
         margin-right: 8px;
     }
@@ -331,6 +345,18 @@ a {
     .hat__checkstatus::before {
         content: "Статус ремонта";
         margin-right: 9px;
+    }*/
+
+    .hat__repair a {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+    }
+
+    .hat__checkstatus a {
+        display: flex;
+        align-items: center;
+        gap: 9px;
     }
 
     li {
