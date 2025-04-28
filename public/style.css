@@ -27,9 +27,8 @@
     }
 
 .body {
-    /*overflow-y: scroll;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    text-overflow: ellipsis;*/
-
+    overflow-y: visible;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -37,10 +36,9 @@
     background: #F8F8F8;
 }
 
-/*::-webkit-scrollbar {
-    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+::-webkit-scrollbar {
     width: 0;
-    }*/
+    }
 
 .hat {
     display: flex;
@@ -67,14 +65,8 @@
     margin: 24px 16px 24px 0;
 }
 
-/*li a {
-    height: 40px;
-    align-self: center;
-}
-*/
-
 .hat__item {
-    align-self: bottom;/* надо как-то выровнять этот элемент*/
+    align-self: bottom;
 }
 
 .hat__divider {
@@ -84,11 +76,6 @@
     border-radius: 1px;
     background: #EAEAEA;
 }
-/*
-.hat__list--first:last-child {
-    display: none;
-    align-self: center;
-}*/
 
 .title {
     display: flex;
@@ -117,11 +104,11 @@
     display: flex;
     overflow-y: scroll;
     border: none;
-    /*overflow: hidden;
-    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
     padding: 0;
     margin: 24px 16px 24px 16px;
+}
+
+.menu__item {
     height: 40px;
 }
 
@@ -189,13 +176,6 @@ a {
     margin: 0;
 }
 
-/*.main__link svg {
-    width: 24px;
-    height: 24px;
-    top: 346px;
-    left: 16px;
-}*/
-
 .main__link {
     margin-bottom: 16px;
     margin-left: 16px;
@@ -227,10 +207,6 @@ a {
 } 
 
 @media screen and (min-width: 768px) {
-    /*.body {
-        width: auto;
-        height: auto;
-    }*/
 
     .hat__call, .hat__chat, .hat__profile, .hat__divider--first, .hat__divider--second {
         display: block;
@@ -266,14 +242,8 @@ a {
         display: flex;
         flex-direction: column;
         gap: 14px;
-        /*line-height: 20px;*/
-        /*height: 160px;*/
-        /*две строчки НИЖЕ ЧТОБЫ ОБРЕЗАТЬ FLEX-ЭЛЕМЕНТ
-        flex-wrap: wrap; 
-        overflow: hidden;*/
         width: 312px;
         color: #1B1C21;
-        /*font-family: "TT Lakes";*/
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -284,9 +254,7 @@ a {
     }
 
     .main__text--second {
-        display: none;/*flex;
-        flex-wrap: wrap; 
-        overflow: hidden;*/
+        display: none;
     }
 
     .main__img {
@@ -336,16 +304,6 @@ a {
     .hat__list {
         margin: 0;
     }
-
-    /*.hat__repair::before {
-        content: "Оставить заявку";
-        margin-right: 8px;
-    }
-
-    .hat__checkstatus::before {
-        content: "Статус ремонта";
-        margin-right: 9px;
-    }*/
 
     .hat__repair a {
         display: flex;
